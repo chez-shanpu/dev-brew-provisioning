@@ -1,0 +1,32 @@
+branches:
+  only:
+    - master
+
+matrix:
+  include:
+    - os: linux
+      dist: xenial
+      sudo: required
+      env:
+        - ANSIBLE_FORCE_COLOR=1
+    - os: osx
+      osx_image: xcode10.1
+      env:
+        - ANSIBLE_FORCE_COLOR=1
+
+
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./ansible-setup-apt.sh ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./ansible-setup-brew.sh ; fi
+
+script:
+  - ansible-playbook -v dev-brew-provisioning.yml --syntax-check
+  - ansible-playbook -v dev-brew-provisioning.yml
+  - >
+    ansible-playbook -v dev-brew-provisioning.yml | grep -q 'changed=0.*failed=0'
+    && (echo 'Idempotence test: pass' && exit 0)
+    || (echo 'Idempotence test: fail' && exit 1)
+
+notifications:
+  email: false
+  slack: shanpu-hq:0eAmwVhkZYOehnlWhLtKQICP
