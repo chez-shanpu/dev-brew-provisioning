@@ -16,8 +16,14 @@ matrix:
 
 
 before_install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./ansible-setup-brew.sh ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew upgrade ansible ; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./ansible-setup-apt.sh ; fi
+  # Remove MySQL.
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get -y purge 'mysql*' ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get -y autoremove ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get -y autoclean ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo rm -rf /var/lib/mysql ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo truncate -s 0 /var/log/mysql/error.log ; fi
 
 script:
   - ansible-playbook -v dev-brew-provisioning.yml --syntax-check
