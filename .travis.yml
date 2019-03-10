@@ -16,8 +16,8 @@ matrix:
 
 
 before_install:
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./ansible-setup-apt.sh ; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./ansible-setup-brew.sh ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./ansible-setup-brew.sh ; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./ansible-setup-apt.sh ; fi
 
 script:
   - ansible-playbook -v dev-brew-provisioning.yml --syntax-check
