@@ -32,8 +32,8 @@
 
   tags: linuxbrew_dependences_install
 
-  - name: Install linuxbrew
-    shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-    args:
-      creates: ~/.linuxbrew/
-    changed_when: false
+- name: Install linuxbrew
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+  args:
+    creates: ~/.linuxbrew/
+  changed_when: false
