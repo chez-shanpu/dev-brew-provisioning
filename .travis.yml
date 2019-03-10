@@ -28,10 +28,10 @@ before_install:
 script:
   - ansible-playbook -v dev-brew-provisioning.yml --syntax-check
   - ansible-playbook -v dev-brew-provisioning.yml
-  - >
-    ansible-playbook -v dev-brew-provisioning.yml | grep -q 'changed=0.*failed=0'
-    && (echo 'Idempotence test: pass' && exit 0)
-    || (echo 'Idempotence test: fail' && exit 1)
+#  - >
+#    ansible-playbook -v dev-brew-provisioning.yml | grep -q 'changed=0.*failed=0'
+#    && (echo 'Idempotence test: pass' && exit 0)
+#    || (echo 'Idempotence test: fail' && exit 1)
 
 notifications:
   email: false
