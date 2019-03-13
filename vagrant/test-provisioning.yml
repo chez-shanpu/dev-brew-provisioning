@@ -8,3 +8,6 @@
   roles:
     - name: common
       tags: common
+
+    - name: font
+      tags: font

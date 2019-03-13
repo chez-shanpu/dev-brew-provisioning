@@ -2,6 +2,10 @@
 - include_tasks: linuxbrew.yml
   when: "ansible_os_family == 'Debian'"
 
-- homebrew:
+- name: Update homebrew
+  homebrew:
     update_homebrew: yes
     upgrade_all: yes
+#  Ubuntu環境用にパスをとおす
+  environment:
+    PATH: $PATH:/home/linuxbrew/.linuxbrew/bin
