@@ -1,3 +1,7 @@
 ---
 - include_tasks: linuxbrew.yml
   when: "ansible_os_family == 'Debian'"
+
+- homebrew:
+    update_homebrew: yes
+    upgrade_all: yes
