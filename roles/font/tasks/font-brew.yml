@@ -1,0 +1,10 @@
+---
+- block:
+    - name: brew tap caskroom/fonts
+      homebrew_tap: tap=caskroom/fonts state=present
+
+    - homebrew_cask:
+        name: font-ricty-diminished
+
+    - homebrew_cask:
+        name: font-powerline-symbols

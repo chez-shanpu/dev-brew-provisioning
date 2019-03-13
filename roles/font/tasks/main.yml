@@ -1,0 +1,6 @@
+---
+- include_tasks: font-apt.yml
+  when: "ansible_os_family == 'Debian'"
+
+- include_tasks: font-brew.yml
+  when: "ansible_os_family == 'Darwin'"
