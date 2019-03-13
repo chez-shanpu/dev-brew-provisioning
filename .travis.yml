@@ -4,11 +4,11 @@ branches:
 
 matrix:
   include:
-    - os: linux
-      dist: xenial
-      sudo: required
-      env:
-        - ANSIBLE_FORCE_COLOR=1
+#    - os: linux
+#      dist: xenial
+#      sudo: required
+#      env:
+#        - ANSIBLE_FORCE_COLOR=1
     - os: osx
       osx_image: xcode10.1
       env:

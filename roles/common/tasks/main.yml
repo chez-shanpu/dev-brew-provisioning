@@ -7,5 +7,5 @@
     update_homebrew: yes
     upgrade_all: yes
 #  Ubuntu環境用にパスをとおす
-  environment:
-    PATH: $PATH:/home/linuxbrew/.linuxbrew/bin
+#  environment:
+#    PATH: $PATH:/home/linuxbrew/.linuxbrew/bin
