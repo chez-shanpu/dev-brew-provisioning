@@ -13,3 +13,11 @@
     state: link
     force: yes
   changed_when: false
+
+- name: Put ".hyper.js"
+  file:
+    src: '{{ dotfiles_path }}/.hyper.js'
+    dest: ~/.hyper.js
+    state: link
+    force: yes
+  changed_when: false
