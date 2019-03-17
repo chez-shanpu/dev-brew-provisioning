@@ -2,7 +2,6 @@
 - name: Install fish by brew
   homebrew:
     name: 'fish'
-    install_options: latest
 
 - block:
     - name: Obtain path to fish
