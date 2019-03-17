@@ -1,7 +1,7 @@
 ---
 - name: Install fish by brew
   homebrew:
-    name: fish
+    name: 'fish'
     install_options: latest
 
 - block:
