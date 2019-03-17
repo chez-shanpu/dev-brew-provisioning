@@ -9,3 +9,8 @@
 #  Ubuntu環境用にパスをとおす
 #  environment:
 #    PATH: $PATH:/home/linuxbrew/.linuxbrew/bin
+
+- name: Install peco
+  homebrew:
+    name: 'peco'
+    install_options: latest
