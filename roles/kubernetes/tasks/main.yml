@@ -1,0 +1,9 @@
+---
+- name: Install kubectl
+  homebrew:
+    name: 'kubernetes-cli'
+
+# kubensのインストールも含む
+- name: Install kubectx
+  homebrew:
+    name: 'kubectx'
