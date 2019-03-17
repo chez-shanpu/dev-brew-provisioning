@@ -13,4 +13,3 @@
 - name: Install peco
   homebrew:
     name: 'peco'
-    install_options: latest
