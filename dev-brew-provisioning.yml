@@ -8,3 +8,6 @@
 
     - name: font
       tags: font
+
+    - name: dotfiles
+      tags: dotfiles
