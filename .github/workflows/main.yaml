@@ -14,10 +14,8 @@ jobs:
     steps:
       - name: Install Ansible
         run: brew install ansible
-      - name: Debug1
-        run: pwd
-      - name: Debug2
-        run: ls ../ -a
+      - name: Checkout code
+        uses: actions/checkout@v1
       - name: Syntax Check
         run: ansible-playbook -v ./dev-brew-provisioning.yml --syntax-check
       - name: Runnning Playbook
