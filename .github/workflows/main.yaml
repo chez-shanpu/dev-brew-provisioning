@@ -17,7 +17,7 @@ jobs:
       - name: Debug1
         run: pwd
       - name: Debug2
-        run: ls -a
+        run: ls ../ -a
       - name: Syntax Check
         run: ansible-playbook -v ./dev-brew-provisioning.yml --syntax-check
       - name: Runnning Playbook
