@@ -11,10 +11,12 @@ jobs:
     runs-on: macos-latest
     env:
       ANSIBLE_FORCE_COLOR: 1
-      ANSIBLE_DEBUG: 1
+#      ANSIBLE_DEBUG: 1
     steps:
       - name: Install Ansible
         run: brew install ansible
+      - name: Confirm Ansible Version
+        run: ansible --version
       - name: Checkout code
         uses: actions/checkout@v1
       - name: Syntax Check
