@@ -10,6 +10,6 @@
 #  environment:
 #    PATH: $PATH:/home/linuxbrew/.linuxbrew/bin
 
-- name: Install peco
-  homebrew:
-    name: 'peco'
+#- name: Install peco
+#  homebrew:
+#    name: 'peco'
