@@ -15,5 +15,8 @@
     - name: fish
       tags: fish
 
+    - name: docker
+      tags: docker
+
     - name: kubernetes
       tags: kubernetes
