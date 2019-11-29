@@ -2,3 +2,4 @@
 fish_config_file:
   - path: .config/fish/config.fish
   - path: .config/fish/fishfile
+  - path: .config/fish/fish_variables
