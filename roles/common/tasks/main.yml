@@ -13,3 +13,15 @@
 - name: Install peco
   homebrew:
     name: 'peco'
+
+- name: Install ghq
+  homebrew:
+    name: 'ghq'
+
+- name: Install hub
+  homebrew:
+    name: 'hub'
+
+- name: Install alfred
+  homebrew_cask:
+    name: 'alfred'
