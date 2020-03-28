@@ -6,22 +6,24 @@
   homebrew:
     update_homebrew: yes
     upgrade_all: yes
-#  Ubuntu環境用にパスをとおす
-#  environment:
-#    PATH: $PATH:/home/linuxbrew/.linuxbrew/bin
 
-- name: Install peco
+- name: Install brew tools
   homebrew:
-    name: 'peco'
+    name:
+      - 'peco'
+      - 'ghq'
+      - 'hub'
+      - 'fd'
+      - 'nmap'
+      - 'pipenv'
+      - 'tmux'
+      - 'tree'
 
-- name: Install ghq
-  homebrew:
-    name: 'ghq'
-
-- name: Install hub
-  homebrew:
-    name: 'hub'
-
-- name: Install alfred
+- name: Install brew-cask tools
   homebrew_cask:
-    name: 'alfred'
+    name:
+      - 'alfred'
+      - 'iterm2'
+      - 'jetbrains-toolbox'
+      - 'visual-studio-code'
+      - 'wireshark'
