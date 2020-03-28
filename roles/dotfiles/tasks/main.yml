@@ -8,4 +8,6 @@
   changed_when: false
 
 - name: Run provision.sh
-  shell: '{{ dotfiles_path }}/provision.sh'
+  shell: ./provision.sh
+  args:
+    chdir: '{{ dotfiles_path }}'
