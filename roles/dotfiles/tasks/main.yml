@@ -11,3 +11,4 @@
   shell: ./provision.sh
   args:
     chdir: '{{ dotfiles_path }}'
+  changed_when: false
