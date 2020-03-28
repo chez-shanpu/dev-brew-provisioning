@@ -1,5 +1,0 @@
----
-- name: Install c-lang pkgs by brew
-  homebrew:
-    name: 'cmake'
-    install_options: latest

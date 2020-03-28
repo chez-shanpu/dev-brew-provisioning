@@ -1,10 +1,2 @@
 ---
-- include_tasks: anyenv.yml
-
-- include_tasks: goenv.yml
-
-- include_tasks: go-tools.yml
-
-- include_tasks: pyenv.yml
-
-- include_tasks: c.yml
+- include_tasks: golang.yml
