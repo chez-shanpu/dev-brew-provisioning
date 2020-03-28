@@ -4,20 +4,11 @@
     repo: https://git@github.com/chez-shanpu/dotfiles
     dest: '{{ dotfiles_path }}'
     force: yes
+    version: 'mac'
   changed_when: false
 
-- name: Put ".gitconfig" to home
-  file:
-    src: '{{ dotfiles_path }}/.gitconfig'
-    dest: ~/.gitconfig
-    state: link
-    force: yes
-  changed_when: false
-
-- name: Put ".hyper.js"
-  file:
-    src: '{{ dotfiles_path }}/.hyper.js'
-    dest: ~/.hyper.js
-    state: link
-    force: yes
+- name: Run provision.sh
+  shell: ./provision.sh
+  args:
+    chdir: '{{ dotfiles_path }}'
   changed_when: false
