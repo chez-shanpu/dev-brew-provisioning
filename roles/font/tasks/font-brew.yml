@@ -8,3 +8,5 @@
 
     - homebrew_cask:
         name: font-powerline-symbols
+
+  tags: font_install

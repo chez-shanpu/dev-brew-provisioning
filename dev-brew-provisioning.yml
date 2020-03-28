@@ -20,3 +20,6 @@
 
     - name: kubernetes
       tags: kubernetes
+      
+    - name: language
+      tags: language
