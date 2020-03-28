@@ -22,6 +22,6 @@ jobs:
         run: ansible-playbook -v ./dev-brew-provisioning.yml
       - name: Idempotence Test
         run: |
-          ansible-playbook -v dev-brew-provisioning.yml | grep -q 'changed=0.*failed=0'
-          && (echo 'Idempotence test: pass' && exit 0)
+          ansible-playbook -v dev-brew-provisioning.yml | grep -q 'changed=0.*failed=0' \
+          && (echo 'Idempotence test: pass' && exit 0) \
           || (echo 'Idempotence test: fail' && exit 1)
