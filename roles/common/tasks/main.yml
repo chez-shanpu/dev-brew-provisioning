@@ -18,6 +18,7 @@
       - 'pipenv'
       - 'tmux'
       - 'tree'
+      - 'rmtrash'
 
 - name: Install brew-cask tools
   homebrew_cask:
