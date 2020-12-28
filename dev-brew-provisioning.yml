@@ -23,3 +23,6 @@
       
     - name: language
       tags: language
+
+    - name: nvim
+      tags: nvim

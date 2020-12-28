@@ -1,0 +1,13 @@
+---
+- name: Install neovim nighty
+  homebrew:
+    state: head
+    name: 
+    - 'luajit'
+    - 'neovim'
+
+
+- name: Install neovim dependencies
+  homebrew:
+    name:
+    - 'node' 
