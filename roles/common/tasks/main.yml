@@ -7,15 +7,19 @@
 - name: Install brew tools
   homebrew:
     name:
-      - 'peco'
-      - 'ghq'
-      - 'hub'
+      - 'bat'
+      - 'direnv'
+      - 'duf'
+      - 'exa'
       - 'fd'
+      - 'gh'
+      - 'ghq'
       - 'nmap'
+      - 'peco'
       - 'pipenv'
+      - 'rmtrash'
       - 'tmux'
       - 'tree'
-      - 'rmtrash'
 
 - name: Install brew-cask tools
   homebrew_cask:
