@@ -12,6 +12,10 @@ jobs:
     env:
       ANSIBLE_FORCE_COLOR: 1
     steps:
+      - name: Install Homebrew
+        run: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      - name: OverWrite brew link (to avoid error)
+        run: brew link --overwrite python@3.9
       - name: Install Ansible
         run: brew install ansible
       - name: Checkout code
