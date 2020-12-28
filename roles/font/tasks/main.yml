@@ -1,6 +1,18 @@
 ---
-- include_tasks: font-apt.yml
-  when: "ansible_os_family == 'Debian'"
+- block:
+    - name: brew tap homebrew/cask-fonts
+      homebrew_tap: tap=homebrew/cask-fonts state=present
 
-- include_tasks: font-brew.yml
-  when: "ansible_os_family == 'Darwin'"
+    - name: Install font-ricty-diminished
+      homebrew_cask:
+        name: font-ricty-diminished
+
+    - name: Install font-powerline-symbols
+      homebrew_cask:
+        name: font-powerline-symbols
+
+    - name: Install font-cica 
+      homebrew_cask:
+        name: font-cica
+
+  tags: font_install
