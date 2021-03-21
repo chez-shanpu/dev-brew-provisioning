@@ -4,6 +4,10 @@
     update_homebrew: yes
     upgrade_all: yes
 
+- name: Tap clementtsang/bottom
+  homebrew_tap:
+    name: clementtsang/bottom
+
 - name: Install brew tools
   homebrew:
     name:
