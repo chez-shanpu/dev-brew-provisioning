@@ -21,9 +21,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v1
       - name: Syntax Check
-        run: ansible-playbook -v ./dev-brew-provisioning.yml --syntax-check
+        run: ansible-playbook -v ./dev-mac-provisioning.yml --syntax-check
       - name: Runnning Playbook
-        run: ansible-playbook -v ./dev-brew-provisioning.yml
+        run: ansible-playbook -v ./dev-mac-provisioning.yml
       - name: Idempotence Test
         run: |
           ansible-playbook -v dev-brew-provisioning.yml | grep -q 'changed=0.*failed=0' \
