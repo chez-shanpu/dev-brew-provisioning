@@ -23,7 +23,7 @@
       - 'peco'
       - 'pipenv'
       - 'procs'
-      - 'rmtrash'
+     #- 'rmtrash'
       - 'tmux'
       - 'tree'
 
