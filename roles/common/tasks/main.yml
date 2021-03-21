@@ -8,6 +8,7 @@
   homebrew:
     name:
       - 'bat'
+      - 'bottom'
       - 'direnv'
       - 'duf'
       - 'exa'
@@ -17,6 +18,7 @@
       - 'nmap'
       - 'peco'
       - 'pipenv'
+      - 'procs'
       - 'rmtrash'
       - 'tmux'
       - 'tree'
