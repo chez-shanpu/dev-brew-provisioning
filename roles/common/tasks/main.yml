@@ -37,8 +37,9 @@
       - 'wireshark'
 
 - name: Get rmtrash v1.14
-  get_url:
-    url: https://github.com/PhrozenByte/rmtrash/archive/refs/tags/v1.14.tar.gz
+  ansible.builtin.unarchive:
+    remote_src: yes
+    src: https://github.com/PhrozenByte/rmtrash/archive/refs/tags/v1.14.tar.gz
     dest: ./
 
 - name: Install rmtrash
