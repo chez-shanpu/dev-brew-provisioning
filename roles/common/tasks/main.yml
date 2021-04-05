@@ -30,9 +30,12 @@
 - name: Install brew-cask tools
   homebrew_cask:
     name:
+      - '1password'
       - 'alfred'
       - 'iterm2'
       - 'jetbrains-toolbox'
+      - 'karabiner-elements'
+      - 'slack'
       - 'visual-studio-code'
       - 'wireshark'
 
