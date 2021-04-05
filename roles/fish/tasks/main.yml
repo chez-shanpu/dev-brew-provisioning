@@ -64,6 +64,7 @@
     - name: Install fish plugins
       shell: fisher update
       changed_when: false
+      ignore_errors: yes
 
     - name: reflect config.fish
       shell: source ~/.config/fish/config.fish
