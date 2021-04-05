@@ -18,14 +18,18 @@ jobs:
         run: brew link --overwrite python@3.9
       - name: Install Ansible
         run: brew install ansible
+      - name: Install Ansible Lint
+        run: brew install ansible-lint
       - name: Checkout code
         uses: actions/checkout@v1
       - name: Syntax Check
         run: ansible-playbook -v ./dev-mac-provisioning.yml --syntax-check
-      - name: Runnning Playbook
+      - name: Run Lint
+        run: ansible-lint ./**/*.yml
+      - name: Run Playbook
         run: ansible-playbook -v ./dev-mac-provisioning.yml
       - name: Idempotence Test
         run: |
-          ansible-playbook -v dev-brew-provisioning.yml | grep -q 'changed=0.*failed=0' \
+          ansible-playbook -v ./dev-mac-provisioning.yml | grep -q 'changed=0.*failed=0' \
           && (echo 'Idempotence test: pass' && exit 0) \
           || (echo 'Idempotence test: fail' && exit 1)
