@@ -26,3 +26,6 @@
 
     - name: nvim
       tags: nvim
+
+    - name: tmux
+      tags: tmux
