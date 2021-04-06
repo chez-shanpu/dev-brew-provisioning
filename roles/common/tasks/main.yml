@@ -24,7 +24,6 @@
       - 'pipenv'
       - 'procs'
      #- 'rmtrash'
-      - 'tmux'
       - 'tree'
 
 - name: Install brew-cask tools
